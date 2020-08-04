@@ -1,5 +1,5 @@
 package com.edgleidson.workshopmongo;
-//Aula 343 - Entidade Usuario e REST funcionando.
+//Aula 344 - Conectando ao MongoDB com repositorio e serviço.
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
