@@ -1,5 +1,5 @@
 package com.edgleidson.workshopmongo;
-//Aula 345 - Operação de Instanciação da base de dados.
+//Aula 346 - Usando padrão DTO para retornar (usuarios).
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

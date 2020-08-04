@@ -1,6 +1,7 @@
 package com.edgleidson.workshopmongo.resource;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.edgleidson.workshopmongo.dominio.Usuario;
+import com.edgleidson.workshopmongo.dto.UsuarioDTO;
 import com.edgleidson.workshopmongo.servico.UsuarioService;
 
 
@@ -21,9 +23,14 @@ public class UsuarioResource {
 	private UsuarioService servico;
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public ResponseEntity<List<Usuario>> buscarTodos() {
+	public ResponseEntity<List<UsuarioDTO>> buscarTodos() {
 		List<Usuario> lista =  servico.buscarTodos();		
-		return ResponseEntity.ok().body(lista);
+		
+		// Converter Lista em listaDTO. _ Expressão Lambda (x -> código).
+		List<UsuarioDTO> listaDTO = lista.stream().
+				map(x -> new UsuarioDTO(x)).collect(Collectors.toList());
+		
+		return ResponseEntity.ok().body(listaDTO);
 	}
 
 }
