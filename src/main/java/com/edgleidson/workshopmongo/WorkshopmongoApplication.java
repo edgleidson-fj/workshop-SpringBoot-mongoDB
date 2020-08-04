@@ -1,5 +1,5 @@
 package com.edgleidson.workshopmongo;
-//Aula 344 - Conectando ao MongoDB com repositorio e serviço.
+//Aula 345 - Operação de Instanciação da base de dados.
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
