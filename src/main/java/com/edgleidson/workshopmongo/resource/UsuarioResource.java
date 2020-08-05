@@ -48,4 +48,10 @@ public class UsuarioResource {
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(usuario.getId()).toUri();
 		return ResponseEntity.created(uri).build();
 	}
+	
+	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+	public ResponseEntity<Void> excluir(@PathVariable String id) {
+		servico.excluir(id);
+		return ResponseEntity.noContent().build();
+	}
 }

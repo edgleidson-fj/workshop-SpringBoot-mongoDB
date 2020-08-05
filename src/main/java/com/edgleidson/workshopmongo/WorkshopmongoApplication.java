@@ -1,5 +1,5 @@
 package com.edgleidson.workshopmongo;
-//Aula 348 - Inserção de Usuário com (POST).
+//Aula 349 - Deleção de Usuário com (DELETE).
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
