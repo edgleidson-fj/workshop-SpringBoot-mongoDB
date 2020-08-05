@@ -1,5 +1,5 @@
 package com.edgleidson.workshopmongo;
-//Aula 347 - Obtendo um usuário por ID.
+//Aula 348 - Inserção de Usuário com (POST).
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
