@@ -1,5 +1,5 @@
 package com.edgleidson.workshopmongo;
-//Aula 346 - Usando padrão DTO para retornar (usuarios).
+//Aula 347 - Obtendo um usuário por ID.
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

@@ -1,12 +1,14 @@
 package com.edgleidson.workshopmongo.servico;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.edgleidson.workshopmongo.dominio.Usuario;
 import com.edgleidson.workshopmongo.repositorio.UsuarioRepository;
+import com.edgleidson.workshopmongo.servico.excecao.ObjetoNaoEncontradoException;
 
 @Service
 public class UsuarioService {
@@ -14,8 +16,15 @@ public class UsuarioService {
 	// Injeção de dependência.
 	@Autowired
 	private UsuarioRepository repositorio;
-	
-	public List<Usuario> buscarTodos(){
+
+	public List<Usuario> buscarTodos() {
 		return repositorio.findAll();
+	}
+
+	public Usuario buscarPorId(String id) {
+		Optional<Usuario> obj = repositorio.findById(id);
+		
+		// orElseThrow = Retorne objeto ou lance uma exceção.  
+		return obj.orElseThrow(() -> new ObjetoNaoEncontradoException("Objeto não encontrado"));
 	}
 }
