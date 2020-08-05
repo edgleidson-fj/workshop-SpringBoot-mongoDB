@@ -1,5 +1,5 @@
 package com.edgleidson.workshopmongo;
-//Aula 349 - Deleção de Usuário com (DELETE).
+//Aula 350 - Atualização de Usuário com (PUT).
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

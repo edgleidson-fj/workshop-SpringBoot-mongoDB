@@ -54,4 +54,12 @@ public class UsuarioResource {
 		servico.excluir(id);
 		return ResponseEntity.noContent().build();
 	}
+	
+	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+	public ResponseEntity<Void> atualizar(@RequestBody UsuarioDTO usuarioDTO, @PathVariable String id) {
+		Usuario usuario = servico.paraDTO(usuarioDTO);
+		usuario.setId(id);		
+		usuario = servico.atualizar(usuario);	
+		return ResponseEntity.noContent().build();
+		}
 }

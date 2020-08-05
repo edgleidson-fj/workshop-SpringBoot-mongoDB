@@ -37,6 +37,17 @@ public class UsuarioService {
 		repositorio.deleteById(id);
 	}
 	
+	public Usuario atualizar(Usuario obj) {
+		Usuario novoObj = buscarPorId(obj.getId());
+		atualizarArquivo(novoObj, obj);
+		return repositorio.save(novoObj);
+	}
+	
+	private void atualizarArquivo(Usuario novoObj, Usuario obj) {
+		novoObj.setNome(obj.getNome());
+		novoObj.setEmail(obj.getEmail());
+	}
+
 	// DTO.
 	public Usuario paraDTO(UsuarioDTO usuarioDTO) {
 		return new Usuario(usuarioDTO.getId(), usuarioDTO.getNome(), usuarioDTO.getEmail());
