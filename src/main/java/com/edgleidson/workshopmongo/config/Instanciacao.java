@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.edgleidson.workshopmongo.dominio.Post;
 import com.edgleidson.workshopmongo.dominio.Usuario;
+import com.edgleidson.workshopmongo.dto.AutorDTO;
 import com.edgleidson.workshopmongo.repositorio.PostRepository;
 import com.edgleidson.workshopmongo.repositorio.UsuarioRepository;
 
@@ -37,12 +38,10 @@ public class Instanciacao implements CommandLineRunner {
 		Usuario maria = new Usuario(null, "Maria Brown", "maria@gmail.com");
 		Usuario alex = new Usuario(null, "Alex Green", "alex@gmail.com");
 		Usuario bob = new Usuario(null, "Bob Grey", "bob@gmail.com");
-		
-		// Instanciar Post aninhado com Usuário.
-		Post post1 = new Post(null, sdf.parse("21/03/2018"), "Partiu viagem!", "Vou viajar para São Paulo.", maria);
-		Post post2 = new Post(null, sdf.parse("23/03/2018"), "Bom dia!", "Acordei feliz hoje.", maria);
-		
 		usuarioRepository.saveAll(Arrays.asList(maria, alex, bob));
+		
+		Post post1 = new Post(null, sdf.parse("21/03/2018"), "Partiu viagem!", "Vou viajar para São Paulo.", new AutorDTO(maria));
+		Post post2 = new Post(null, sdf.parse("23/03/2018"), "Bom dia!", "Acordei feliz hoje.", new AutorDTO(maria));
 		postRepository.saveAll(Arrays.asList(post1, post2));
 	}
 

@@ -1,5 +1,5 @@
 package com.edgleidson.workshopmongo;
-//Aula 352 - Criando entidade Post com Usuário aninhado.
+//Aula 353 - Projeção dos dados do autor com padrão DTO.
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
