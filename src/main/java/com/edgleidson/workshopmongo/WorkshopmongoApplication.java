@@ -1,5 +1,5 @@
 package com.edgleidson.workshopmongo;
-//Aula 350 - Atualização de Usuário com (PUT).
+//Aula 352 - Criando entidade Post com Usuário aninhado.
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
