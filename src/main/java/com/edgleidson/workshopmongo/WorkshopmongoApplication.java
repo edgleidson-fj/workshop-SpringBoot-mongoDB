@@ -1,5 +1,5 @@
 package com.edgleidson.workshopmongo;
-//Aula 355 - Endpoint para retornar os Posts de um Usuário.
+//Aula 355 - Obtendo um Post por ID.
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

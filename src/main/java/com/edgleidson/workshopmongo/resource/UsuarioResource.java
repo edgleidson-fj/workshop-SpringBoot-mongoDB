@@ -19,7 +19,7 @@ import com.edgleidson.workshopmongo.dto.UsuarioDTO;
 import com.edgleidson.workshopmongo.servico.UsuarioService;
 
 @RestController
-@RequestMapping(value = "/usuarios") // EndPoint.
+@RequestMapping(value = "/usuarios") // Endpoint.
 public class UsuarioResource {
 
 	// Injeção de dependência.
