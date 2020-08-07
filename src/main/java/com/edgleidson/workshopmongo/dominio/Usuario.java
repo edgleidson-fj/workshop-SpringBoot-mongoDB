@@ -1,12 +1,17 @@
 package com.edgleidson.workshopmongo.dominio;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 // @Document = Anotação MongoDB para classe dominio.
 // @Id = Anotação MongoDB para primaryKey do dominio.
+// @DBRef = Anotação MongoDB para referenciar outra Coleção.
+// (lazy = true) = Para evitar que seja carregado sem necessidade.
 
 @Document(collection = "usuario")
 public class Usuario implements Serializable {
@@ -16,6 +21,9 @@ public class Usuario implements Serializable {
 	private String id;
 	private String nome;
 	private String email;
+	
+	@DBRef(lazy = true)  
+	private List<Post> posts = new ArrayList<>();
 
 	public Usuario() {
 	}
@@ -50,6 +58,16 @@ public class Usuario implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	// Post
+	public List<Post> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
+	}
+	//--------------------------------------
 
 	@Override
 	public int hashCode() {
@@ -75,5 +93,4 @@ public class Usuario implements Serializable {
 			return false;
 		return true;
 	}
-
-}
+	}

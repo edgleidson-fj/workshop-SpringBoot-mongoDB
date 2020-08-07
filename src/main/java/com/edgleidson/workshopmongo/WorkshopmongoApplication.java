@@ -1,5 +1,5 @@
 package com.edgleidson.workshopmongo;
-//Aula 353 - Projeção dos dados do autor com padrão DTO.
+//Aula 354 - Referenciando os Posts do Usuário.
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
