@@ -1,5 +1,5 @@
 package com.edgleidson.workshopmongo;
-//Aula 354 - Referenciando os Posts do Usuário.
+//Aula 355 - Endpoint para retornar os Posts de um Usuário.
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
