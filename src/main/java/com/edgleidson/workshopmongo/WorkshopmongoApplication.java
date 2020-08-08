@@ -1,5 +1,5 @@
 package com.edgleidson.workshopmongo;
-//Aula 355 - Obtendo um Post por ID.
+//Aula 357 - Acrescentando comentários aos Posts.
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
