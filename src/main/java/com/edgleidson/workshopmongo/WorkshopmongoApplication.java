@@ -1,5 +1,5 @@
 package com.edgleidson.workshopmongo;
-//Aula 357 - Acrescentando comentários aos Posts.
+//Aula 358 - Consulta simples com (query methods).
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

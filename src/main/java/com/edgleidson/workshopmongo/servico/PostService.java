@@ -1,5 +1,6 @@
 package com.edgleidson.workshopmongo.servico;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,5 +21,11 @@ public class PostService {
 		Optional<Post> obj = repositorio.findById(id);		
 		// orElseThrow = Retorne objeto ou lance uma exceção.  
 		return obj.orElseThrow(() -> new ObjetoNaoEncontradoException("Objeto não encontrado"));
+	}
+	
+	public List<Post> buscarPorTitulo(String titulo){
+		// Containing = Contém 
+		// IgnoreCase = Ignorar o tamanho da letra.
+	  return repositorio.findByTituloContainingIgnoreCase(titulo);
 	}
 }
