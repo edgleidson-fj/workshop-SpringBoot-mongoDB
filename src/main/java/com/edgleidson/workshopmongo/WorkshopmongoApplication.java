@@ -1,5 +1,5 @@
 package com.edgleidson.workshopmongo;
-//Aula 358 - Consulta simples com (query methods).
+//Aula 359 - Consulta simples com @Query.
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

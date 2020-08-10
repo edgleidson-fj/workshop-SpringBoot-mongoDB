@@ -26,6 +26,8 @@ public class PostService {
 	public List<Post> buscarPorTitulo(String titulo){
 		// Containing = Contém 
 		// IgnoreCase = Ignorar o tamanho da letra.
-	  return repositorio.findByTituloContainingIgnoreCase(titulo);
+//	  return repositorio.findByTituloContainingIgnoreCase(titulo);
+		
+		return repositorio.pesquisarTitulo(titulo);
 	}
 }
