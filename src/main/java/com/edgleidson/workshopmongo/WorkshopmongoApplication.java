@@ -1,5 +1,5 @@
 package com.edgleidson.workshopmongo;
-//Aula 359 - Consulta simples com @Query.
+//Aula 360 - Consulta om vários critérios.
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
